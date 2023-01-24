@@ -41,7 +41,6 @@ for i, t in enumerate(toc[:len(toc)-1]):
     if count==len(substring):
         headerlist.append(t[1])
 
-print(headerlist)
 print(pagelist)
 
 with Path('newdocument.text').open(mode='w') as output_file_3:
@@ -71,8 +70,6 @@ with Path('newdocument.text').open(mode='w') as output_file_3:
                                 #if we have a good not page list
                                 pagelist.remove(pagelist[j])
 
-    print(pagelist)
-    print(notpagelist)
     for p, page in enumerate(doc):
         if p in range(pagelist[0], pagelist[-1:][0]):
             content = page.get_text()
