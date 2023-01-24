@@ -2,7 +2,7 @@ import fitz
 import re
 from re import search
 from pathlib import Path
-doc = fitz.open('./Konrath.pdf')
+doc = fitz.open('./EJ.pdf')
 toc = doc.get_toc()
 #list of nums, begin page and end page
 pagelist = []
