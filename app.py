@@ -2,7 +2,7 @@ import fitz
 import re
 from re import search
 from pathlib import Path
-doc = fitz.open('./EJ.pdf')
+doc = fitz.open('./SEHS.pdf')
 toc = doc.get_toc()
 #list of nums, begin page and end page
 pagelist = []
@@ -96,7 +96,7 @@ with Path('newdocument.text').open(mode='w') as output_file_3:
                     for s in range(len(substring)):
                         if not re.search(substring[s], content[0:25].lower()):
                             count += 1
-                    if count>0:
-                        quit()
+                        else:
+                            quit()
                     if count==len(substring):
                         output_file_3.write(content)
